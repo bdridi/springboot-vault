@@ -1,0 +1,9 @@
+apiVersion: v1
+name: service-expenses-group
+description: Service of expenses groups
+
+type: application
+
+version: 1.0.0
+
+appVersion: {{appVersion}}

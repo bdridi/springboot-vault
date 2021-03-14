@@ -1,0 +1,14 @@
+---
+name: dummy-project
+
+image:
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+resources:
+  requests:
+    cpu: 125m
+    memory: 256Mi
+  limits:
+    cpu: 2
+    memory: 512Mi

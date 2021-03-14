@@ -1,0 +1,22 @@
+---
+
+spring:
+  profiles: dev, preprod, prod, local, default
+  cloud:
+    vault:
+      host: ${VAULT_ADDRESS}
+      port: 8200
+      scheme: http
+      authentication: APPROLE
+      app-role:
+        role-id:  ${VAULT_ROLE_ID}
+        secret-id: ${VAULT_SECRET_ID}
+        role: springboot-vault
+      generic:
+        enabled: false
+      kv:
+        enabled: true
+        backend: secret
+        profile-separator: '/'
+        default-context: springboot-vault
+        application-name: springboot-vault

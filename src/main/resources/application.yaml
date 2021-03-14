@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: springboot-vault
+
+demo:
+  vault:
+    secret: {my-secret}
+    value: {my-value}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  info:
+    git:
+      mode: full
